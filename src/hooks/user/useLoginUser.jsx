@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useAuth } from "../../auth/authprovider"; // Asegúrate de la ruta correcta
+import { useAuth } from "../../auth/authprovider"; 
 
 function useLoginUser() {
   const [error, setError] = useState(null);
-  const { login } = useAuth(); // Usamos el contexto para actualizar el estado global
+  const { login } = useAuth(); 
   const initialUrl = import.meta.env.VITE_API_URL;
 
   const loginUser = async (formData) => {
@@ -19,7 +19,7 @@ function useLoginUser() {
       if (response.ok) {
         const data = await response.json();
         setError(null);
-        login(data.token, data.role); // Ahora actualiza el estado global en AuthProvider
+        login(data.token, data.role); 
         console.log("¡Logged in!");
         return true;
       } else {

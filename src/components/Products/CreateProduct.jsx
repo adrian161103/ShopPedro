@@ -68,11 +68,10 @@ function CreateProduct({ productToEdit, onEditComplete  }) {
 
     const updated = await editProduct(productToEdit._id, data);
     if (updated) {
-      console.log("Producto editado exitosamente");
       // Aviso al padre que ya terminé:
       if (onEditComplete) onEditComplete(updated);
     } else {
-      console.log("Error al editar el producto");
+      // Eliminado console.log innecesario
     }
   };
 

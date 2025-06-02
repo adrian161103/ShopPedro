@@ -5,8 +5,8 @@ const useCreateProducts = () => {
     name: "",
     description: "",
     status: "",
-    profiRate: 1,       // Valor por defecto para profiRate
-    highlighted: false, // Nuevo campo booleano
+    profiRate: 1,
+    highlighted: false,
   });
   const [price, setPrice] = useState({ amount: 0, currency: "" });
   const [stock, setStock] = useState(0);
@@ -15,7 +15,6 @@ const useCreateProducts = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [message, setMessage] = useState("");
 
-  // Maneja cambios en los campos de "product"
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (["name", "description", "status", "profiRate", "highlighted"].includes(name)) {
@@ -26,13 +25,11 @@ const useCreateProducts = () => {
     }
   };
 
-  // Maneja los cambios en el objeto "price"
   const handlePriceChange = (e) => {
     const { name, value } = e.target;
     setPrice((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Maneja la selección de archivo y genera la vista previa
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
@@ -43,10 +40,9 @@ const useCreateProducts = () => {
     }
   };
 
-  // Maneja el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setMessage("");
     const formData = new FormData();
     formData.append("name", product.name);
     formData.append("description", product.description);
@@ -77,22 +73,18 @@ const useCreateProducts = () => {
         setMessage(`Error: ${errorData.message || "No se pudo crear el producto"}`);
         return;
       }
-
-      const data = await response.json();
       setMessage("Producto creado exitosamente");
-      console.log("Producto creado:", data);
-    } catch (error) {
-      console.error("Error al crear el producto:", error);
+    } catch {
       setMessage("Error al crear el producto");
     }
   };
 
   return {
     product, setProduct,
-    price, setPrice, // <-- Se añade el setter del precio
+    price, setPrice,
     stock, setStock,
     category, setCategory,
-    image,   setImage,
+    image, setImage,
     imagePreview, setImagePreview,
     message,
     handleChange,

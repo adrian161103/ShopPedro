@@ -17,11 +17,9 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const success = await loginUser(form);
-    console.log(success);
     if (success) {
       navigate("/");
     }
- 
   };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

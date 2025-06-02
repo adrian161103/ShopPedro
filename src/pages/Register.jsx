@@ -18,7 +18,6 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     const response = await registerUser(form);
-    console.log("success");
     if (response) {
       navigate("/login");
     }
