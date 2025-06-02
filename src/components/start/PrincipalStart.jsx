@@ -6,6 +6,10 @@ import LoginStart from './loginStart';
 function PrincipalStart() {
   const [hideHero, setHideHero] = useState(false);
   const threshold = 100; // Umbral en píxeles para mostrar/ocultar el héroe
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
