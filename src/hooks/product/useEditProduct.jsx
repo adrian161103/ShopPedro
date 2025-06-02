@@ -6,7 +6,7 @@ function useEditProduct() {
   const editProduct = async (id, data) => {
     const token = localStorage.getItem("token");
     // Construye el FormData a partir del objeto data
-    const formData = new FormData();
+    const formData = new FormData(); 
     for (const key in data) {
       if (data[key] !== undefined && data[key] !== null) {
         formData.append(key, data[key]);
@@ -16,6 +16,7 @@ function useEditProduct() {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/product/update/${id}`, {
         method: "PUT",
         headers: {
+          "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(data),

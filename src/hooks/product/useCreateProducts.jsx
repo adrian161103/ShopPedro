@@ -14,7 +14,6 @@ const useCreateProducts = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [message, setMessage] = useState("");
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (["name", "description", "status", "profiRate", "highlighted"].includes(name)) {
