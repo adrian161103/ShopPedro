@@ -7,4 +7,7 @@ export default defineConfig({
     include: ['gsap', 'gsap/Draggable'],
   },
   plugins: [react()],
+   build: {
+    outDir: 'dist', 
+  }
 })
