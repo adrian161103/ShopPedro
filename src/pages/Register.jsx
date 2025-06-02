@@ -35,7 +35,7 @@ function Register() {
           transition={{ duration: 0.7 }}
         >
           <img
-            src="/img/test/IMG_3871.jpG"
+            src="/img/test/IMG_3871.JPG"
             alt="Bienvenido a la Tienda Fitness"
           />
 
