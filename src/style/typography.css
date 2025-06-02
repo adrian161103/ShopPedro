@@ -1,0 +1,58 @@
+/* estilo base */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff5dd;
+}
+
+h1 {
+  color: #fff5dd;
+  font-weight: 700; 
+  font-size: 3.5rem; 
+  letter-spacing: 1px; 
+  margin: 30px 0;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600; 
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+
+p {
+  font-weight: 300; 
+  font-size: 1.2rem; 
+  margin: 0 auto 20px auto; 
+  max-width: 800px; 
+  padding: 0 20px;
+  text-align: center; 
+}
+
+span {
+  font-weight: 300; 
+  font-size: 1.2rem; 
+  margin: 0 auto 20px auto; 
+  max-width: 800px; 
+  padding: 0 20px;
+  text-align: center; 
+}
+
+
+
+
+.HeaderLi a {
+  color: #fff5dd;
+  font-weight: 400;
+}
+
+.HeaderLogin a {
+  color: #fff5dd;
+  font-weight: 400;
+}

@@ -1,0 +1,206 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: inherit;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-bottom: 2rem;
+}
+.header.no-padding {
+  padding: 0;
+  margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: transparent;
+}
+nav {
+  display: flex;
+  justify-content: center; /* Centra el contenido */
+  align-items: center;
+  width: 100%;
+}
+
+.Nav.scrolled {
+  position: fixed;
+  background: rgba(81, 71, 71, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: background-color 0.9s ease, box-shadow 0.9s ease;
+  z-index: 10;
+}
+
+.HeaderUl {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center; /* Centra los elementos dentro de la lista */
+  flex-grow: 1; /* Asegura que esta lista ocupe el máximo espacio disponible */
+}
+
+
+.HeaderLi {
+  padding: 12px 20px; /* Relleno interno */
+  border: 3px solid transparent; /* Borde exterior transparente */
+  /* Borde interno visible con color negro */
+  border-radius: 50px; /* Bordes redondeados */
+  transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+}
+
+.HeaderLogin {
+  padding: 12px 20px; /* Relleno interno */
+  border: 3px solid transparent; /* Borde exterior transparente */
+  border-radius: 50px; /* Bordes redondeados */
+  transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+}
+
+.HeaderLi:hover,
+.HeaderLogin:hover {
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 3px #f39c12; /* Cambiar color del borde interno al pasar el mouse */
+}
+
+header .logo h1 {
+  letter-spacing: 2px;
+}
+
+header nav ul {
+  list-style: none;
+  gap: 2rem;
+}
+
+header nav ul a{
+  text-decoration: none;
+  transition: color 0.3s;
+  color: #fff5dd;
+}
+
+header nav ul a:hover {
+  text-decoration: none;
+  color: #f39c12; /* Color dorado */
+}
+
+header nav a:focus, 
+header nav a:active {
+  outline: none;
+  box-shadow: none;
+  
+}
+
+
+.headerStart  {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+  padding: 10px 20px;
+}
+
+
+/* ===============================
+   MEDIA QUERIES SEGÚN EL ANCHO
+   (Usando los puntos de referencia: 320, 480, 768, 1024 y 1680px)
+   =============================== */
+
+/* Móvil Portrait: 320x480 (width hasta 320px) */
+@media (max-width: 320px) {
+  .header {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 3px 5px;
+    font-size: 0.45rem;
+  }
+  header nav ul {
+    gap: 0.2rem;
+  }
+}
+
+/* Móvil Landscape: 480x320 (entre 321px y 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  .header {
+    padding: 0.55rem;
+    margin-bottom: 0.55rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 4px 6px;
+    font-size: 0.5rem;
+  }
+  header nav ul {
+    gap: 0.3rem;
+  }
+}
+
+/* Tablet Portrait: 768x1024 (entre 481px y 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+  header nav ul {
+    gap: 0.5rem;
+  }
+}
+
+/* Tablet Landscape: 1024x768 (entre 769px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  header nav ul {
+    gap: 0.8rem;
+  }
+}
+
+/* Escritorio: 1680x1050 (entre 1025px y 1680px) */
+@media (min-width: 1025px) and (max-width: 1680px) {
+  .header {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  header nav ul {
+    gap: 2rem;
+  }
+}
+
+/* Extra Desktop: mayores a 1680px (opcional) */
+@media (min-width: 1681px) {
+  .header {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .HeaderLi,
+  .HeaderLogin {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  header nav ul {
+    gap: 2rem;
+  }
+}

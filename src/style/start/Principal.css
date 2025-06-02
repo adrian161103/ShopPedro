@@ -1,0 +1,351 @@
+.principal {
+  position: relative;
+  z-index: 0;
+  /* Reservamos el espacio para el héroe fijo */
+}
+
+/* ----- Sección Héroe ----- */
+.hero {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la pantalla */
+  z-index: 1; /* Debe estar por debajo del header */
+  background-image: url("../../public/img/IMG_3899-2.JPG"); /* Ajusta la ruta según tu proyecto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  transition: opacity 0.5s ease;
+}
+
+.hero.hide {
+  opacity: 0;
+}
+
+.hero h2 {
+  font-size: 4rem; 
+  color: #fff5dd; 
+  font-weight: 700; 
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  mix-blend-mode: exclusion; 
+  margin: 0;
+}
+
+.hero p {
+  font-size: 2rem; 
+  color: #fff5dd;
+  font-weight: 400; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  mix-blend-mode: exclusion; 
+  margin-top: 10px;
+}
+
+/* ----- Secciones de Productos Destacados (Planes y Sobre Mi) ----- */
+.productos-destacados {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+  padding-inline: 180px;
+}
+
+.productos-destacados h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.productos {
+  display: flex;
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+  align-items: center;
+}
+.productos p{
+text-align: start;
+}
+
+/* Inversión del orden para AboutMe */
+.aboutme .productos {
+  flex-direction: row-reverse;
+}
+
+/* ----- Estilos para las Imágenes de Sección ----- */
+.SectionsProduct {
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.SectionsProduct img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.SectionsProduct:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.SectionsProduct::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(255, 250, 233, 0.059);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.SectionsProduct:hover::after {
+  opacity: 1;
+}
+
+/* ----- Animaciones para imágenes (se activan cuando entran en vista, usando useInView) ----- */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.LinkStart{
+  text-decoration: none;
+  color: #fff5dd;
+  transition: all 1s ease;
+
+}
+
+.ButtonStart{
+  background: #fff5dd00;
+  cursor: pointer;
+  display: flex;
+  width: auto;
+text-decoration: none;
+  border: 2px solid #fff5dd;
+  border-radius: 18px;
+color: #fff5dd;
+transition: all 1s ease;
+}
+
+.ButtonStart:hover {
+  background: #fff5dd;
+  color: black;
+}
+  
+  .LinkStart:hover{
+    color: black;
+
+  }
+
+
+
+
+
+
+
+/* ===== Sección 320x480 (max-width: 320px) ===== */
+@media (max-width: 320px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .productos-destacados {
+    padding: 0px;
+    
+  }
+  .productos-destacados h3 {
+    font-size: 1.8rem;
+  }
+  .productos{
+    flex-direction: column-reverse;
+    margin:  20px 0;
+  }
+  
+.productos p {
+  font-size: 0.6rem;
+  margin: 0; 
+  text-align:left ;
+  padding: 15px 0px;
+}
+
+.aboutme .productos{
+  flex-direction: column-reverse;
+}
+}
+
+
+
+/* ===== Sección 480x320 (min-width: 321px and max-width: 480px) ===== */
+@media (min-width: 321px) and (max-width: 430px) {
+  .hero {
+    padding: 2.5rem 1.2rem;
+  }
+  .hero h2 {
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+  }
+  .productos-destacados {
+    padding: 35px 0px;
+   
+  }
+  .productos-destacados h3 {
+    font-size: 7.5vw;
+    padding: 0 20px;
+    text-align: left;
+  }
+  .aboutme .productos{
+    flex-direction: column;
+  }
+  .productos{
+    flex-direction: column;
+  }
+  .productos p{
+    font-size: 1.1rem;
+    text-align:left ;
+    padding: 0px;
+  }
+
+
+}
+
+/* ===== Sección 768x1024 (min-width: 481px and max-width: 768px) ===== */
+@media (min-width: 431px) and (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  .hero h2 {
+    font-size: 3.5rem;
+  }
+  .hero p {
+    font-size: 1.8rem;
+  }
+  .productos-destacados {
+    padding: 40px 20px;
+  }
+  .productos-destacados h3 {
+    font-size: 2.2rem;
+  }
+  .productos p{
+    font-size: 1.5rem;
+    text-align:left ;
+    padding: 0px;
+  }
+  .aboutme .productos{
+    flex-direction: column-reverse;
+  }
+  .productos{
+    flex-direction: column-reverse;
+  }
+}
+
+/* ===== Sección 1024x768 (min-width: 769px and max-width: 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+  .hero h2 {
+    font-size: 4rem;
+  }
+  .hero p {
+    font-size: 2rem;
+  }
+  .productos-destacados {
+    padding: 45px 25px;
+  }
+  .productos-destacados h3 {
+    font-size: 2.5rem;
+  }
+  
+}
+
+/* ===== Sección 1680x1050 (min-width: 1025px and max-width: 1680px) =====
+@media (min-width: 1025px) and (max-width: 1680px) {
+  .hero {
+    height: 85vh;
+    padding: 5rem 2rem;
+  }
+  .hero h2 {
+    font-size: 4.5rem;
+  }
+  .hero p {
+    font-size: 2.25rem;
+    max-width: 400px;
+  }
+  .productos-destacados {
+    padding: 50px 30px;
+  }
+  .productos-destacados h3 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* ===== Extra Grandes (min-width: 1681px) ===== */
+/* @media (min-width: 1681px) {
+  .hero {
+    height: 90vh;
+    padding: 6rem 3rem;
+  }
+  .hero h2 {
+    font-size: 5rem;
+  }
+  .hero p {
+    font-size: 2.5rem;
+  }
+  .productos-destacados {
+    padding: 60px 40px;
+  }
+  .productos-destacados h3 {
+    font-size: 3rem;
+  }
+} */ 
+

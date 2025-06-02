@@ -1,0 +1,78 @@
+.upload-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #0c8f68;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .upload-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .upload-container input,
+  .upload-container select,
+  .upload-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .upload-container textarea {
+    width: 100%;
+    resize: none;  /* Evita que el usuario cambie el tamaño */
+    height: 100px; /* Ajusta la altura según necesites */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Evita que el padding afecte el ancho */
+    overflow-y: auto; /* Agrega scroll si el texto es muy largo */
+  }
+  
+  .upload-container input[type="file"] {
+    border: none;
+  }
+  
+  .upload-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .upload-container .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .upload-container button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .upload-container button:hover {
+    background-color: #218838;
+  }
+  
+  .upload-container img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
