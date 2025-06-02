@@ -1,4 +1,4 @@
-@import "./app.css";
+@import "/src/style/app.css";
 @import "./typography.css";
 @import "./start/Principal.css";
 @import "./layout/Header.css";
