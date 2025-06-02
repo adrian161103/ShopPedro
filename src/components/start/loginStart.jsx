@@ -24,7 +24,7 @@ function LoginStart() {
         <Link to="/register">
           <div className="SectionsProduct aboutme">
             <img
-              src="../../public//img/IMG_3871.JPG"
+              src="/img/IMG_3871.JPG"
               alt="Sobre Mi"
             />
           </div>

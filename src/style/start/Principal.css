@@ -11,7 +11,7 @@
   width: 100%;
   height: 100vh; /* Ocupa toda la pantalla */
   z-index: 1; /* Debe estar por debajo del header */
-  background-image: url("../../public/img/IMG_3899-2.JPG"); /* Ajusta la ruta según tu proyecto */
+  background-image: url("/img/IMG_3899-2.JPG"); /* Ajusta la ruta según tu proyecto */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -28,7 +28,7 @@ function AboutMeStart() {
         <Link to="/AboutMe">
           <div className="SectionsProduct aboutme">
             <img
-              src="../../public//img/IMG_3946 3.JPG"
+              src="/img/IMG_3946 3.JPG"
               alt="Sobre Mi"
             />
           </div>

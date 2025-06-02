@@ -26,7 +26,7 @@ function PlansStart() {
       </div>
         <Link to="/plans">
           <div className="SectionsProduct plans">
-            <img src="../../public//img/IMG_3881.JPG" alt="Plan" />
+            <img src="/img/IMG_3881.JPG" alt="Plan" />
           </div>
         </Link>
       </section>
