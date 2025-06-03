@@ -83,6 +83,18 @@ const Carousel = () => {
     };
   }, [products]);
 
+  // Ocultar header cuando el modal está abierto
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      header.style.display = selectedProduct ? 'none' : '';
+    }
+    return () => {
+      const header = document.querySelector('header');
+      if (header) header.style.display = '';
+    };
+  }, [selectedProduct]);
+
   return (
     <>
       <section className="CarouselContainer">
