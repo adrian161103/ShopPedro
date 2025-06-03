@@ -85,7 +85,7 @@ const Carousel = () => {
 
   return (
     <>
-      <section className="cloneable">
+      <section className="CarouselContainer">
         {/* Overlay con contador y controles */}
         <div className="overlay">
           <div className="overlay-inner">
@@ -151,14 +151,15 @@ const Carousel = () => {
                   style={{ cursor: "pointer" }}
                 >
                   <div className="slide-inner">
-                    <img
+                    <img className="imgC"
                       src={product.imageUrl}
                       loading="lazy"
                       alt={product.name}
                     />
                     <div className="slide-caption">
                       <div className="caption-dot" />
-                      <p className="caption">{product.name}</p>
+                      <p className="caption"
+                      >{product.name}</p>
                     </div>
                   </div>
                 </div>

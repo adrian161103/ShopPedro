@@ -1,4 +1,4 @@
-// AboutmeP.jsx
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";

@@ -1,14 +1,6 @@
-.cloneable {
-  padding: auto;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-  font-size: 1.1vw;
-}
 
-.cloneable {
+
+.CarouselContainer {
   padding: auto;
   justify-content: center;
   align-items: center;
@@ -309,6 +301,19 @@ position: absolute;
 }
 
 @media (max-width: 700px) {
+ 
+
+
+ .caption{
+    font-size:0.6rem;
+  }
+  .imgC{
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+  }
+ 
   .product-card {
     width: 100vw !important;
     min-width: 0;

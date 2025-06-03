@@ -7,8 +7,7 @@ function Header() {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
   const isRegisterPage = location.pathname === "/register";
-  const Start = location.pathname === "/";
-  const isPlans = location.pathname === "/plans";
+  const Start = location.pathname === "/" || location.pathname === "/aboutme" || location.pathname === "/plans";
 
 
   // Obtenemos la info del usuario y la función logout desde el auth provider
@@ -16,7 +15,7 @@ function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isLoginPage || isRegisterPage || isPlans) {
+    if (isLoginPage || isRegisterPage ) {
       setIsFixed(true);
       return;
     }
@@ -33,7 +32,7 @@ function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isLoginPage, isRegisterPage, isPlans]);
+  }, [isLoginPage, isRegisterPage]);
 
   // Handler para el logout
   const handleLogout = () => {
