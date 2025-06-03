@@ -1,6 +1,3 @@
-
-
-
 .cloneable {
   padding: auto;
   justify-content: center;
@@ -261,10 +258,15 @@ html:not(.wf-design-mode) [data-slider="slide"].active .slide-caption{ opacity: 
 }
 
 .product-card img {
-  width: 100%;
-  height: 45rem;
-  object-fit: contain;
+  width: 100% !important;
+  max-width: 100vw !important;
+  height: auto !important;
+  max-height: 40vh;
+  object-fit: contain !important;
+  object-position: center !important;
   margin-bottom: 1rem;
+  display: block;
+  background: #000024;
 }
 
 .product-card h2 {
@@ -303,4 +305,57 @@ position: absolute;
 
 .whatsapp-btn:hover{
   background-color: #120561; ;
-  color:white;}
+  color:white;
+}
+
+@media (max-width: 700px) {
+  .product-card {
+    width: 100vw !important;
+    min-width: 0;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .product-card img {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 55vw !important;
+    min-height: 220px;
+    max-height: 60vw;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin-bottom: 0.5rem;
+    display: block;
+    background: #000024;
+    border-radius: 0;
+  }
+  .product-card h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.5em 0 0.2em 0;
+  }
+  .product-card p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0 1em;
+  }
+  .close-btn {
+    font-size: 2rem;
+    right: 0.5em;
+    top: 0.5em;
+  }
+  .whatsapp-btn {
+    font-size: 1.1rem;
+    padding: 0.6em 1.2em;
+    margin: 1.2em auto 1em auto;
+    display: block;
+    width: calc(100vw - 2em);
+    max-width: 400px;
+  }
+  
+}
